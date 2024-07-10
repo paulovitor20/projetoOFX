@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitor de Extrato Bancário OFX</title>
+    <link rel="stylesheet" href="./src/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Leitor de Extrato Bancário OFX</h1>
+        <input type="file" id="fileInput" accept=".ofx">
+        <button id="processButton">Processar Extrato</button>
+        <div id="result">
+            <h2>Resultados:</h2>
+            <p><strong>Entradas do Dia:</strong> <span id="totalEntradas">0.00</span></p>
+            <p><strong>Saídas do Dia:</strong> <span id="totalSaidas">0.00</span></p>
+
+            <h3>Entradas</h3>
+            <table id="entradasTable">
+                <thead>
+                    <tr>
+                        <th>Valor</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <h3>Saídas</h3>
+            <table id="saidasTable">
+                <thead>
+                    <tr>
+                        <th>Valor</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./src/js/script.js"></script>
+</body>
+</html>
